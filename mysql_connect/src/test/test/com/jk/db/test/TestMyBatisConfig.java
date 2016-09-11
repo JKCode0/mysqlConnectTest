@@ -50,7 +50,7 @@ public class TestMyBatisConfig {
 		
 	}
 	
-	// DB session 
+	// 
 	// step_1
 	@Test
 	public void sessionDBTest() {
@@ -76,28 +76,70 @@ public class TestMyBatisConfig {
 		
 	}
 	
-	// DB databases
+	// select 1 from dual <-- query 
 	//step_2
 	@Test
 	public void queryExecuteTest(){
 		InputStream input = null;
+		SqlSession sqlSession = null;
 		try {
 			//
 			input = Resources.getResourceAsStream(str_res);
 			
 			SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(input);
 			//
-			SqlSession session = factory.openSession();
+			sqlSession = factory.openSession();
 			
-			System.out.println("session=" + session);
+			System.out.println("sqlSession=" + sqlSession);
 			//
 			
-			session.close();
+			int result = sqlSession.selectOne("selectEmpty");
+			System.out.println("result:" + result);
+		
 			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally{
+			if(sqlSession != null){
+				sqlSession.close();
+			}
+		}
+		
+	}
+	
+	// query
+	@Test
+	public void getSelectCnt(){
+		InputStream input = null;
+		SqlSession sqlSession = null;
+		
+		try {
+			input = Resources.getResourceAsStream(str_res);
+			SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(input);
+			System.out.println("factory:" + factory);
+			
+			sqlSession = factory.openSession();
+			System.out.println(" sqlSession:" + sqlSession);
+			
+			int result = sqlSession.selectOne("selectEmpty100");
+			System.out.println(" result:" + result);
+			
+			//
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			
+			//
+			if(sqlSession != null){
+				sqlSession.close();
+				
+			}
+			
 		}
 		
 		

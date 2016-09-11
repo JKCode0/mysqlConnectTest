@@ -21,7 +21,7 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="" />
+		<mapper resource="com/jk/xteam/sql/EmptyExt.xml" />
 	</mappers>
 
 </configuration>
