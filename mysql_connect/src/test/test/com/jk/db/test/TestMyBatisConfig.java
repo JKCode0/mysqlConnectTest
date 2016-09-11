@@ -16,7 +16,7 @@ import org.junit.Test;
 public class TestMyBatisConfig {
 	
 	// 
-	private String str_res = "com/jk/xteam/config/db_config.xml";	// 실행되어지는 bin 으로 들어 가서 확인 해볼것.
+	private String str_res = "com/jk/xteam/config/testDB_config.xml";	// 실행되어지는 bin 으로 들어 가서 확인 해볼것.
 	private SqlSessionFactory sqlSessionFactory;
 	
 	@Before
@@ -50,7 +50,7 @@ public class TestMyBatisConfig {
 		
 	}
 	
-	
+	// DB session 
 	// step_1
 	@Test
 	public void sessionDBTest() {
@@ -76,6 +76,7 @@ public class TestMyBatisConfig {
 		
 	}
 	
+	// DB databases
 	//step_2
 	@Test
 	public void queryExecuteTest(){

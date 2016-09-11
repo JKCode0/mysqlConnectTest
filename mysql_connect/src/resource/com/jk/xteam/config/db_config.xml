@@ -13,9 +13,9 @@
 					<property name="driver" value="oracle.jdbc.OracleDriver"/>  
 					<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
 				-->
-				<property name="url" value="jdbc:mysql://1.11.169.27:3336/DEV_DB"/>
-				<property name="username" value="devuser1"/>
-				<property name="password" value="1q2w3e4r5t"/>
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/DEV_DB"/>
+				<property name="username" value="user1"/>
+				<property name="password" value="pwd"/>
 			</dataSource>
 		</environment>
 	</environments>
