@@ -14,9 +14,9 @@ import com.mysql.jdbc.Statement;
 
 public class WebDBConnectTest {
 
-	private String url = "jdbc:mysql://1.11.169.27:3336/DEV_DB"; // url 접속 DB name
-	private String user = "devuser1";		// User
-	private String pwd = "1q2w3e4r5t";		// pwd
+	private String url = "jdbc:mysql://127.0.0.1:3336/DEV_DB"; // url 접속 DB name
+	private String user = "user";		// User
+	private String pwd = "pwd";		// pwd
 	private String query = "show tables";	//
 	
 	

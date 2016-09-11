@@ -137,13 +137,8 @@ public class TestMyBatisConfig {
 			//
 			if(sqlSession != null){
 				sqlSession.close();
-				
 			}
-			
 		}
-		
-		
-		
 	}
 	
 	
