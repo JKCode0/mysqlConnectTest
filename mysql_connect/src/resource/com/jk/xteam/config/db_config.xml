@@ -22,6 +22,7 @@
 	
 	<mappers>
 		<mapper resource="com/jk/xteam/sql/EmptyExt.xml" />
+		<mapper resource="com/jk/xteam/sql/UserTableInfoMapper.xml" />
 	</mappers>
 
 </configuration>
