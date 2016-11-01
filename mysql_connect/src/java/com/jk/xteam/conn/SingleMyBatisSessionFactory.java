@@ -56,6 +56,9 @@ public class SingleMyBatisSessionFactory {
 	
 	//
 	public SqlSession getSession(){
+		if(sqlSessionFactory==null){
+			getSqlSessionFactory();
+		}
 		return sqlSessionFactory.openSession();
 	}
 }

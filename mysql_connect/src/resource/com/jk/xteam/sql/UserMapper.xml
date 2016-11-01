@@ -24,6 +24,43 @@
 		USER_TYPE 
 	FROM TB_USER
 	</select>
+	
+	<insert id="insertUser" parameterType="com.jk.xteam.domain.User" useGeneratedKeys="true" keyProperty="userId" >
+		<!-- 
+		<selectKey keyProperty="userId" resultType="int" order="BEFORE">
+    		SELECT MAX(USER_ID + 1) FROM TB_USER
+  		</selectKey>
+  		-->
+	INSERT INTO TB_USER
+		(
+		USER_NM,
+		USER_ADDR,
+		USER_EMAIL,
+		USER_TYPE)
+	VALUES
+	(
+		#{userNm},
+		#{userAddr},
+		#{userEmail},
+		#{userType}		
+	)	
+	</insert>
 
+
+	<update id="updateUser" parameterType="com.jk.xteam.domain.User">
+	UPDATE TB_USER
+	SET USER_NM = #{userNm}
+		, USER_ADDR = #{userAddr}
+		, USER_EMAIL = #{userEmail}
+		, USER_TYPE = #{userType}
+	WHERE USER_ID = #{userId}
+	</update>
+	
+	
+	<!-- multi -->
+	<delete id="deleteUser" parameterType="com.jk.xteam.domain.User">
+	DELETE FROM TB_USER
+	 WHERE USER_ID = #{userId}	
+	</delete>
 
 </mapper>
