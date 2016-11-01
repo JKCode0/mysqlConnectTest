@@ -23,6 +23,7 @@ public class MySQLConnectTest {
 	}
 	
 	
+	// myBatis config
 	@Test
 	public void connectMyBatisConfig() {
 		System.out.println("+++++++++++++++++++++ ");

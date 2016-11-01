@@ -7,3 +7,7 @@
 3. Neon
 
 4. jdk_1.8.101 32
+
+
+마이바티스를 사용한 자바 퍼시스턴스 개발 - 참고
+http://www.acornpub.co.kr/book/mybatis-java-persistence

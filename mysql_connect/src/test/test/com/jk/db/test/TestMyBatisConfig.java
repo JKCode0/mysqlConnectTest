@@ -142,5 +142,12 @@ public class TestMyBatisConfig {
 	}
 	
 	
+	// select <-- List map
+	
+	
+	
+	// insert 
+	
+	// update 
 
 }
