@@ -8,6 +8,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
+// mySQL - Oracle  connect <--
 public class SingleMyBatisSessionFactory {
 	
 	private final String CONFIG_PATH = "com/jk/xteam/config/testDB_config.xml";

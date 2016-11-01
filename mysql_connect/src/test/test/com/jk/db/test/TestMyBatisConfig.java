@@ -109,6 +109,7 @@ public class TestMyBatisConfig {
 		
 	}
 	
+	
 	// query
 	@Test
 	public void getSelectCnt(){
