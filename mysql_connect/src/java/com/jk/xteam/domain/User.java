@@ -7,8 +7,14 @@ public class User {
 	private String userNm;
 	private String userAddr;
 	private String userEmail;
-	private int type;
+	private int userType;
 	
+	public int getUserType() {
+		return userType;
+	}
+	public void setUserType(int userType) {
+		this.userType = userType;
+	}
 	//
 	public int getUserId() {
 		return userId;
@@ -34,12 +40,7 @@ public class User {
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
-	public int getType() {
-		return type;
-	}
-	public void setType(int type) {
-		this.type = type;
-	}
+	
 	
 	
 	
