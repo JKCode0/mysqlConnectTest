@@ -16,6 +16,7 @@
 	</resultMap>
 	
 	<select id="selectUsers" resultMap="selectUsersResult" parameterType="com.jk.xteam.domain.User" >
+	<![CDATA[
 	SELECT 
 		USER_ID, 
 		USER_NM, 
@@ -23,6 +24,7 @@
 		USER_EMAIL, 
 		USER_TYPE 
 	FROM tb_user
+	]]>
 	</select>
 	
 	<insert id="insertUser" parameterType="com.jk.xteam.domain.User" useGeneratedKeys="true" keyProperty="userId" >

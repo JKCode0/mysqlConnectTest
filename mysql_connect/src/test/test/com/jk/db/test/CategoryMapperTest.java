@@ -46,7 +46,7 @@ public class CategoryMapperTest {
 		SqlSession session = SingleMyBatisSessionFactory.getIns().getSession();
 		
 		TbCategory category = new TbCategory();
-		category.setCaSeq(2);
+		category.setCaSeq(3);
 		category.setName("Update 분류표");
 		
 		int result = session.update("updateCategory", category);
