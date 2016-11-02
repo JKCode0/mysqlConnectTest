@@ -49,10 +49,12 @@
 
 	<update id="updateUser" parameterType="com.jk.xteam.domain.User">
 	UPDATE tb_user
-	SET USER_NM = #{userNm}
-		, USER_ADDR = #{userAddr}
-		, USER_EMAIL = #{userEmail}
-		, USER_TYPE = #{userType}
+	<trim prefix="SET" suffixOverrides=",">
+		<if test="userNm != null ">USER_NM = #{userNm},</if>
+		<if test="userAddr != null ">USER_ADDR = #{userAddr},</if>
+		<if test="userEmail != null ">USER_EMAIL = #{userEmail},</if>
+		<if test="userType > 0 ">USER_TYPE = #{userType},</if>
+	</trim>	
 	WHERE USER_ID = #{userId}
 	</update>
 	
