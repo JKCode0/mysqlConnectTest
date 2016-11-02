@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.jk.xteam.sql.CategoryMapper">
+
+	<insert id="insertCategory" parameterType="com.jk.xteam.domain.TbCategory" useGeneratedKeys="true" keyProperty="caSeq">
+	INSERT INTO tb_category 
+	(NAME,PARENT_SEQ) 
+	VALUES
+	(#{name}, #{parentSeq})
+	</insert>
+
+	<update id="updateCategory" parameterType="com.jk.xteam.domain.TbCategory">
+	UPDATE  tb_category
+	<trim prefix="SET" suffixOverrides=",">
+		<if test="name != null" >NAME = #{name},</if>
+		<if test="parentSeq > 0">PARENT_SEQ = #{parentSeq},</if>
+	</trim>
+	WHERE CA_SEQ = #{caSeq}
+	</update>
+	
+	<delete id="deleteCategory" parameterType="com.jk.xteam.domain.TbCategory">
+	DELETE FROM tb_category
+	WHERE CA_SEQ = #{caSeq}
+	</delete>
+
+</mapper>

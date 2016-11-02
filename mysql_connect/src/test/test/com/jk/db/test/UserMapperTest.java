@@ -12,7 +12,7 @@ import org.junit.Test;
 import com.jk.xteam.conn.SingleMyBatisSessionFactory;
 import com.jk.xteam.domain.User;
 
-public class MyBatisMapperTest {
+public class UserMapperTest {
 
 	@Before
 	public void setUp(){
