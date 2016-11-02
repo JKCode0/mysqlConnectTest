@@ -23,18 +23,17 @@ public class SingleMyBatisSessionFactoryTest {
 	
 	
 	// service call
+	// SingleMyBatisSessionFactory test
 	@Test
 	public void serviceCallTest() {
 		//fail("Not yet implemented");
 		SqlSessionFactory factory = SingleMyBatisSessionFactory.getIns().getSqlSessionFactory();
 		System.out.println("@ factory:" + factory);
 		
-		SqlSession session = MyBatisSessionFactory.getSession();
+		SqlSession session = SingleMyBatisSessionFactory.getIns().getSession();
 		System.out.println("@ session:" + session);
 		
-		
-		
-		
+		session.close();
 		
 			
 	}

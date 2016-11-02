@@ -22,7 +22,7 @@
 		USER_ADDR, 
 		USER_EMAIL, 
 		USER_TYPE 
-	FROM TB_USER
+	FROM tb_user
 	</select>
 	
 	<insert id="insertUser" parameterType="com.jk.xteam.domain.User" useGeneratedKeys="true" keyProperty="userId" >
@@ -31,7 +31,7 @@
     		SELECT MAX(USER_ID + 1) FROM TB_USER
   		</selectKey>
   		-->
-	INSERT INTO TB_USER
+	INSERT INTO tb_user
 		(
 		USER_NM,
 		USER_ADDR,
@@ -48,7 +48,7 @@
 
 
 	<update id="updateUser" parameterType="com.jk.xteam.domain.User">
-	UPDATE TB_USER
+	UPDATE tb_user
 	SET USER_NM = #{userNm}
 		, USER_ADDR = #{userAddr}
 		, USER_EMAIL = #{userEmail}
@@ -59,7 +59,7 @@
 	
 	<!-- multi -->
 	<delete id="deleteUser" parameterType="com.jk.xteam.domain.User">
-	DELETE FROM TB_USER
+	DELETE FROM tb_user
 	 WHERE USER_ID = #{userId}	
 	</delete>
 

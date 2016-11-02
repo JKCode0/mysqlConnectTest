@@ -57,9 +57,9 @@ public class MyBatisMapperTest {
 		Random r = new Random();
 		
 		User user = new User();
-		user.setUserNm("Tester1" + r.nextInt(100));
-		user.setUserAddr("FFFFFF sdfljksdlkfjskldjfklsdjfsdf");
-		user.setUserEmail("testtest@ggmail.com");
+		user.setUserNm("Tester_" + r.nextInt(100));
+		user.setUserAddr("Address user korea co.");
+		user.setUserEmail("test_A@ggmail.com");
 		user.setUserType(1);
 		
 		//
